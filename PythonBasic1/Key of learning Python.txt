@@ -1,0 +1,51 @@
+The key of learning new language are the :
+
+1.Terms 
+
+First are the terms of that language.
+Sometimes a programming language has different words and different definitions for these words that
+you're going to have to memorize things like statements, variables, instantiation.
+Really complicated sounding words.
+But you need to understand what they mean so that you can talk to other programmers.
+
+2.Data Types 
+ 
+That is, what sort of data can a program hold?
+You can think of it as a values.
+Just like in real life, we have different ways to represent values like numbers, letters and symbols.
+In programming, we have these data types to store information, and each programming language has different
+sort of data types.
+
+a) Fundamental Data Types
+
+int   -  represent all numbers
+float -  floating point numbers
+bool  -
+str   -  represent All letters
+list  -
+tuple -
+set   -
+dict  -
+
+
+b) Classes -> Custom Types 
+
+
+c) Specialized Data Types
+we retrive them from modules when we don`t want to create our one 
+
+
+d) None 
+means nothing type , the absolute nothing
+
+
+
+
+3.Actions 
+
+All programming is is a way for us to tell our machines, Hey, store this data and then retrieve this
+data and perform some action on it.
+That's all it is, just using memory and performing some actions.
+
+print() - is an action / the bracket saying : - Perfom  the action on this data types 
+
