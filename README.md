@@ -16,3 +16,5 @@ Make Something
 Tip #10: Build Something, Anything
 Tip #11: Contribute to Open Source
 Go Forth and Learn!
+
+Leard how to GOOGLE things 
