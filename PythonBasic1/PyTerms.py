@@ -12,6 +12,10 @@
 # Well, we can do that with variables so that in Python, all we need to do is name it whatever you want.
 # In our case, it will be IQ and we're going to say IQ equals 190.
 
+from tkinter import N
+from numpy import sometrue
+
+
 IQ = 190
 
 # And this IQ here is a variable.
@@ -79,6 +83,77 @@ print(user_iq)  # WONT`T WORK
 iq = 190
 user_age = 19/4
 a = user_age
+
+
 print(user_age)
 
 print(a)
+
+
+#constants never change in a program 
+PI = 3.14 #capital letters are constant values never to be changes don`t touch it 
+
+# Another type of variable that you're going to see and this is something like 
+__file__   #it start with two __
+# It doesn't look like I just did double underscore here, but it's two underscores and we call these
+# dunder and as you can see here, we have some dunder variables that Python has.
+# But the idea here is that these are meant to be left alone.
+# You should not touch them.
+
+
+a,b,c = 1,2,3
+#And this simply is a way for us to rapidly assign values to variables multiple times.
+
+############################################################################
+                          # EXPRESSIONS# & #STATEMENTS#
+############################################################################
+
+iq = 100 #statement 
+user_age = iq / 5 #expresion is a peace of code that produce a value 
+#statement the line of code that perfom an action
+
+############################################################################
+                          # ARGUMENTED ASSIGNMENT OPERATOR #
+############################################################################
+
+some_value = 5
+some_value = some_value + 2
+some_value = some_value - 2
+some_value = some_value * 2
+
+print(some_value)
+
+#But there's a neater way of doing this called augmented assignment operator.
+some_value= 5
+some_value += 2
+some_value -= 2
+some_value *= 2
+print(some_value)
+
+############################################################################
+                          # IMMUTABILITY #
+############################################################################
+# What does immutability mean?
+# Well, strings and python re immutable.
+# That means they cannot be changed
+
+numbers = '01234567'
+          #01234567
+
+# numbers[0] = '8'
+print(numbers)
+
+# I get an error, I get a typo error saying string object does not support item assignment.
+# Why is that?
+# Because strings are immutable.
+# That is, I cannot change the value of this once it's created.
+# I can just immediately change it to eight.
+# One, two, three, four, five, six, seven.
+
+numbers = numbers + '8'
+print(numbers)
+
+
+
+
+
