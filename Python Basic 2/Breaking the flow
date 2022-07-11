@@ -1,0 +1,27 @@
+Now we're still scratching the surface here, but we now go into an area that gets really, really exciting
+
+because up until now, what we've been doing is this every time we write code, we do something here
+
+and then we go to the second line and do something else, and then finally go to the third line and
+
+do something else and so on and so forth.
+
+Our Python interpreter just went line by line one, all the way to whatever line number we have on our
+
+Dot Pi file and just ran the code.
+
+And it ran really fast because machines are good at that.
+
+They run code really fast.
+
+But we haven't discovered the true power of programming and specifically programming for machines.
+
+You see, the power comes when we start to incorporate the idea of maybe running multiple lines over
+
+and over or maybe skipping a line and going from line one to line three.
+
+And in this section, we're going to talk about the idea of conditions and conditional logic.
+
+1 DO SOMETHING 
+2 DO SOMETHING 
+3 DO SOMETHING 
