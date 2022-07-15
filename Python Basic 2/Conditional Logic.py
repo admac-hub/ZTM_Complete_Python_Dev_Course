@@ -6,6 +6,10 @@
 # We're going to create a car that automatically detects if you can start the engine.
 # Maybe if you're not old enough, the engine won't start and it won't let you drive so that they make
 
+from tkinter import W
+from urllib import response
+
+
 is_old = True
 is_licenced = False
 
@@ -442,3 +446,123 @@ for _ in enumerate(['a','d','v']):
 print('\n')
 for _ in enumerate(('f','g','c','d')):
     print(_)
+
+
+
+###########################################################################
+#                          WHILE LOOP
+############################################################################
+print('\n')
+print('WHILE LOOP')
+print('*'*20)
+print('\n')
+
+# while loop is a little different in that we say while a condition is happening.
+# Do something.
+
+# i = 0
+# while i < 50:   # 0 < 50
+#    print(i)     # hey is 0 < 50 ? True
+                  # print 0
+                  # hey is 0 < 50 ? True
+                  # print 0
+# the logic behind is while the condition is True , return the printed value 
+i = 0
+# while i < 50:   # 0 < 50
+#     print(i)    # 
+#    i += 1       # i = 0 + 1
+                  # 1 < 50
+                  # i = 1 + 1
+                  # 2 < 50..... 50 < 50  stop the loop condition False 
+
+# So to jump out of a while loop, you can either turn the condition false or you can break out of the
+# loop.
+
+while i < 50:
+    print(i)
+    i += 1
+    break
+else:                                # this runs as soon as condiiton goes to false
+    print('Done with all the work')
+
+
+# So when should you use a while loop and when should you use a for loop?
+# And it really depends on the problem you're trying to solve.
+# For example, in a for loop I could do four item in let's say a list one, two, three.
+# And just looking at this code, you know right away that it's going to be looped over three times.
+
+# So when should you use a while loop and when should you use a for loop?
+
+my_list = [1,2,3]
+
+for item in my_list:   # this code is going to be looped over three times 
+    print(item)
+# we can do this in a while loop as well 
+
+i=0
+while i < len(my_list):  # while loops are more powerfull 
+    print(my_list[i])
+    i += 1               # we have to increment ti variable to not loop over and over
+
+
+# For example, let's say we're trying to go through an email list that we've collected on a website,
+# and for each email list, we want to send an email.
+# Well, while the list is still there, let's just keep sending emails.
+# There are many, many cases, but one of the most useful ways to use the while loop is like this.
+# It's to say while.
+# # True.
+# Do something.
+# And make sure that at the end we break.
+ 
+# while True:
+#     print('smth')   
+#     break
+print('\n')
+#  while True:
+#     input('say smth: ')   # But now we can do something powerful like input here.
+   # if i remove break , i will keep asking me the same quesiton in infinity
+
+# WE CAN USE CONDITIONAL LOGIC WITH WHILE LOOPS 
+# while True:                               # im collecting whatever the responce is 
+#    response = input('Say something: ')    # im asking the user to say smth :
+#    if (response == 'bye'):                # any response = True , therfore repeat question.
+#        break                              # when the user answer is = to condition 'bye'
+                                            # the condition is set to True , move forward
+                                            # read the other line , is Break , OK stop looping ! 
+     
+print('\n')
+print('CAN WE BREAK IN FOR LOOPS')
+print('\n')
+
+for item in my_list:
+    print(item)
+    continue
+
+print('\n')
+print('*'*20)
+print('\n')
+
+i=0
+while i < len(my_list):
+    print(my_list[i])
+    i += 1
+    continue   # why do i need this ?
+
+# we can use two other things besides break 
+# 1 -  continue 
+# 2 -  pass
+
+i=0
+while i < len(my_list):
+    print(my_list[i])
+    i += 1
+    pass    # pass just pass it on the next line 
+
+
+for item in my_list:   # when i have a loop 
+ # thinking about it   # but in out code it not cleat what we wan`t to do with it 
+  pass                 # and if we continiue coding and run the code , we gonna get an indendtatino Error 
+                       # becouse the for loop is looking for something 
+                       # so that`s where we use pass , to say move on with the next line 
+                       # rarely used in production , mostly is used while developing smth 
+
