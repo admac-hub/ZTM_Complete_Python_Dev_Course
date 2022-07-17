@@ -1,10 +1,25 @@
 ###########################################################################
 #                       FUNCTIONS  
 ###########################################################################
-print('*'*40)
-print('**********','FUNCTIONS','*******************')
-print('*'* 40)
-print('\n')
+
+from email.header import Header
+
+from requests import head
+
+
+def divide_content():
+     print('\n')
+     print('*'*60)
+     print('\n')
+
+def header(head_name):
+    print('\n')
+    print('*'*40)
+    print('**********', head_name ,'*******************')
+    print('*'* 40)
+    print('\n')
+
+header('functions')
 
 # def  - we are going to defin a functino
 
@@ -65,10 +80,7 @@ tree()
 ###########################################################################
 #                       ARGUMENTS VS PARAMETERS   
 ###########################################################################
-print('*'*40)
-print('**********','ARGUMENTS VS PARAMETERS','*******************')
-print('*'* 40)
-print('\n')
+header('ARGUMENTS VS PARAMETERS')
 
 # The power of functions beyond just being able to call this multiple times because it only lives in one 
 # location in memory is this ability for us to make it dynamic?
@@ -115,10 +127,7 @@ say_hello('Alkend', '<3')
 ###########################################################################
 #                       defautl ARGUMENTS & keywords PARAMETERS   
 ###########################################################################
-print('*'*60)
-print('**********','defautl ARGUMENTS & keywords PARAMETERS','*********')
-print('*'* 60)
-print('\n')
+header('defautl ARGUMENTS & keywords PARAMETERS')
 
 # default parameters
 def say_hello(name='user001fm', emmoji='(^^^)'):    #PARAMETERS
@@ -140,10 +149,7 @@ say_hello('Toby')
 ###########################################################################
 #                       RETURN
 ###########################################################################
-print('*'*60)
-print('**********','RETURN','*********')
-print('*'* 60)
-print('\n')
+header('RETURN')
 
 # Return It's a key word in Python that we are going to see a lot when working with functions.
 
@@ -183,3 +189,289 @@ def sum(num1,num2):
     return another_func
 total = sum(10,20)
 print(total)
+
+
+
+###########################################################################
+#                       METHOD VS FUNCTIONS
+###########################################################################
+header('METHOD VS FUNCTIONS')
+# Functions 
+# list()
+# print()
+# max()
+# min()
+# input()
+
+# in python we have this build in functions that we use 
+# but we also can create our functions 
+
+def do_nothing():
+    pass
+
+
+
+# But we also learned about methods and methods were different because the way we use them was using the
+# dot notation.
+
+# We said dot something for example, if we had a string.
+# Hello?
+# And I do dot.
+
+'hello'.capitalize
+
+
+# Methonds has to be owned by something 
+
+# whatever is to the left of .dot  
+# in our case the string own the method capitalize 
+
+
+# And that's what methods are.
+# They're built in objects that have methods such as strings, dictionaries, sets, tuples, all the
+# They're owned by an object or a data type.
+
+# But at the end of the day, both methods and functions allow us to take actions, right, to take actions
+# on our data types, to have our programs do something.
+
+###########################################################################
+#                       DOC STRINGS
+###########################################################################
+header('DOC STRINGS')
+
+def test(a):           # this is called doc strings
+    '''         
+    Info 4 the functinon ,this function prints param a 
+    '''
+    print(a)
+
+# test("!!!!!!!")   
+
+#test()     # coment inside the functions to be able to document what the function does to be able to find inforamtion later on
+
+# help(test)  # we can use help to find out what a function does
+
+# print(test.__doc__)  #One other way to do this is to use what we call a magic method or a dunder method,
+
+
+# This is a very usefull feature becouse now you can document the porpuse of your functions 
+
+###########################################################################
+#                       Clean Code
+###########################################################################
+header('Clean Code')
+
+def is_odd_or_even(num):
+    if num % 2 == 0:
+        return True
+    elif num % 2 != 0:
+        return False
+
+print(is_odd_or_even(5))
+
+print('\n')
+# how can we clean this code 
+
+def is_odd_or_even(num):   # we have a bolean expression that is evaluatin true or false 
+    return num % 2 == 0    # and we know that return expression evalute is it`s true or if it`s false
+                           # this way we cleaned our code 
+
+print(is_odd_or_even(5))
+
+###########################################################################
+#                       Args & Kwargs
+###########################################################################
+header('Args & Kwargs')
+
+# from ast import arg
+
+# def super_func(*args):
+#     print(args)
+#     return sum(args)
+
+# print(super_func(1,2,3,4,5,6))
+
+###########################################################################
+#                       Walrus 
+###########################################################################
+header('WALRUS')
+# walrus is an antique animal := 
+
+# Now let's just focus on the walrus operator because it is useful and also kind of fun to learn about
+
+# Now let's just focus on the walrus operator because it is useful and also kind of fun to learn about
+# what this new syntax does is it assigns value to variables as part of a larger expression.\
+# So usually you use it in an expression when something is being evaluated like in an if statement may
+# be a while statement.
+
+# we are going to use this in a statement usually when something is going to be evaluated 
+
+a = 'heloooofdwedfo'
+
+if (( len(a)) >10):               
+    print(f"too long {len(a)} elements")
+
+# with walrus 
+
+if ((n := len(a)) >10):               # i assign a value to the variable     
+    print(f"too long {n} elements")
+
+
+
+divide_content()
+
+
+while (( n:=len(a)) >1):
+    print(n)
+    a = a[:-1]
+
+print(a)
+
+# There you have it, the walrus operator.
+# You might not see it a very often.
+# It's essentially a way for us to minimize doing calculations that are similar, let's say, inside of
+# an if statement or a wall statement where we want to do something based on a condition and then calculate
+# that value again
+
+
+###########################################################################
+#                       SCOPE 
+###########################################################################
+header('SCOPE')
+
+# Scope - what variables do i have access to ?
+# if i run the below code 
+# print(name())
+# i get an error name id not defined , becouse it doesn`t exist
+
+# this error is becouse of scope
+# Or variable is not defined here and scope in python has what we call functional scope or function scope.
+
+# python interpreter says , hey what do i have access to ? do i have access to name ? if not return an error
+
+total = 1000    #global scope (global variable) means anyone in the files has access to this varibale , i can use it anywhere inside a condition or inside a loop 
+
+def some_func():
+    allval = 100
+          
+# print(allval)     # i will get an errorr becise the variable is not global 
+
+
+# So think of scope as a new world that we create.
+# In our case, when we create a function, we create a new world that anything that's indented inside
+# of the function is its own world that we don't really have access to.
+# We can only use total if we indent print.
+# And it's part of this world.
+# That's what scope is.
+
+if True: 
+    x = 10
+print(x)
+
+###########################################################################
+#                       SCOPE  rules
+###########################################################################
+header('SCOPE')
+
+# Global variable / indentation of nothing , whatever the file has that`s that`s global 
+
+a = 1
+def parent():
+    a =10
+    def confusion():
+        return a 
+    return confusion
+
+print(a)
+print(parent())
+
+# what is defined inside the function is another universe , another world , another timeLine
+
+# the rules are 
+
+# 1- Start with local .... Hey does confusion know where a is ?  
+# 2 - Paret locat     .... Hey parert do you have a ?
+# 3 - Global          .... Hey File do you have a ?  
+# 4 - Built in python .... Hey Python do tyou have a in your libraries ?
+
+###########################################################################
+#                       Global KeyWords
+###########################################################################
+header('Global KeyWords')
+
+a = 10
+
+def confusion(b):
+    print(b)
+    a = 90
+
+confusion(300)
+
+divide_content()
+
+
+total = 0
+def count():
+    global total    # to be able to use a global variable we need to use the key word global 
+    total += 1
+    return total
+
+print(count())
+
+divide_content()
+
+# A better way of Coding is something called dependency injection 
+
+
+# But the idea is that instead of accessing variables outside of the function like this, which can get
+# really, really complicated as files get bigger and bigger, is to do instead.
+# This.
+# Total.
+# Like this, we create a parameter and then we pass in that parameter.
+# Or argument in here.
+
+total = 0
+def count(total):
+    total += 1
+    return total
+
+print(count(total))
+print(count(count(count(total))))
+
+###########################################################################
+#                       NONLOCAL KEYWORD
+###########################################################################
+header('NONLOCAL KEYWORD')
+
+def outer():
+    x = 'local'
+    def inner():
+        nonlocal x             # this keyword is used to refered to the paret local
+        x = 'nonlocal'         # i wan`t to use a variable that is outside of my local scope 
+        print("inner:",x)
+    
+    inner()
+    print("outer:", x)
+
+outer()
+
+
+divide_content()
+
+
+def outer():
+    x = 'aborm'
+    def inner():
+        nonlocal x             # this keyword is used to refered to the paret local
+        x = 'lura'         # i wan`t to use a variable that is outside of my local scope 
+        print("inner:",x)
+    
+    inner()
+    print("outer:", x)
+
+outer()
+
+print(x)     # --->  this will not run , becouse in python after you done with a function , python destroyied that from his memory 
+# That`s why the scpope is useful
+#                  AVOID USING THIS // MAKE THE CODE PREDICTIBLE AND CLEAN 
+

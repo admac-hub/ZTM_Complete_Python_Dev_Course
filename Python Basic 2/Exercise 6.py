@@ -15,4 +15,7 @@ def checkDriverAge(age=0):    #also make it so that the default age is set to 0 
         print("Powering On. Enjoy the ride!")
     elif int(age) == 18:
         print("Congratulations on your first year of driving. Enjoy the ride!")
-checkDriverAge(56)
+
+
+
+checkDriverAge()
