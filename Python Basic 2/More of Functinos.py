@@ -1,9 +1,9 @@
 
-# def super_func(*args):       # use our star args to have a function that can accept any number of arguments.
-#     print(args)
-#     return sum(args)
+def super_func(*args):       # use our star args to have a function that can accept any number of arguments.
+    print(args)
+    return sum(args)
 
-# print(super_func(1,2,3,4,5,6))
+print(super_func(1,2,3,4,5,6))
 
 # # What about **kwargs ?   this allows us yo use Allows us to use keyword arguments.
 # def super_func(*args, **kwargs):       # *args is a parameter that is gettins his values from the arguments when invoking the function, & **kwargs allow as to grab any number in the kew workd and create a dictionary

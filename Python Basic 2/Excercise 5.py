@@ -19,5 +19,3 @@ print(duplicates)                        # and tell me what values you dumped
     
 print(some_list.count(value))
 
-
-
